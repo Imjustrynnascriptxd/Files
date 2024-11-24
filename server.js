@@ -1,3 +1,6 @@
+// Load environment variables from the .env file
+require('dotenv').config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -46,4 +49,5 @@ app.post("/api/threads", async (req, res) => {
   }
 });
 
+// Start the server
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
